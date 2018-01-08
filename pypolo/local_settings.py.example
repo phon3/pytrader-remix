@@ -1,0 +1,43 @@
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+MAKE_TRADES = False
+
+API_KEY = 
+API_SECRET = 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'pytrader',   #db name to use
+        'USER':  '',  
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '', 
+        'ATOMIC_REQUESTS': True,
+    },
+}
+
+# logfile
+LOG_FILE = "/home/django.log"
+
+# Default number of threads for workers
+NUM_THREADS = 1
+
+DEBUG_APPS = []
+
+# only required for pull_twitter.py
+# get this info @ https://apps.twitter.com/
+TWITTER_CONSUMER_KEY = ''
+TWITTER_CONSUMER_SECRET = ''
+TWITTER_ACCESS_TOKEN_KEY = ''
+TWITTER_ACCESS_TOKEN_SECRET = ''
+
+
+
+
+##only required for pull_reddit.py
+REDDIT_USER_AGENT = 'pytrader'
+REDDIT_CLIENT_ID = ''
+REDDIT_CLIENT_SECRET = ''
+REDIRECT_URL = 'http://127.0.0.1:8080/'
